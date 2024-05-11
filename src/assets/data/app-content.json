@@ -102,5 +102,13 @@
             "profile": "Victoria Scholar.jpg",
             "from": "Ripple"
         }
-    ]
+    ],
+    "seo": {
+        "pages": {
+            "home": {
+                "title": "CryptoGetExpo",
+                "description": "Where global crypto leaders converge to shape the future of finance. With top companies and entrepreneurs, engaging discussions, and networking spanning 30+ countries, it's the ultimate blockchain event."
+            }
+        }
+    }
 }

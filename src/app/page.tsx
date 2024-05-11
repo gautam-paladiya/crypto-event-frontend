@@ -1,3 +1,4 @@
+"use client";
 import Footer from "../components/footer";
 import LandingComponent from "../components/landing-section";
 import NavBar from "../components/nav-bar";
