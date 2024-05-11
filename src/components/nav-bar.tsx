@@ -1,14 +1,15 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { use, useState } from "react";
 import NavList from "./nav-list";
 import { cn } from "../utils/cn";
 import BuyTicketButton from "./common/buy-ticket-btn";
+import { AppContext } from "../providers/app-provider";
 
 type Props = {};
 
 const NavBar = (props: Props) => {
-  const [toggleNav, setToggleNav] = useState(false);
+  const appContext = use(AppContext);
 
   return (
     <header className="z-[1000] max-w-screen top-0 left-0 center fixed w-screen">
@@ -36,19 +37,24 @@ const NavBar = (props: Props) => {
           className={cn(
             "z-[1000] ",
             `${
-              toggleNav
-                ? " py-4 h-screen absolute left-0 top-16 w-40 animate__animated animate__fadeInLeft "
+              appContext?.state.isDrawerOpen
+                ? " py-4 h-screen absolute left-0 top-[4.4rem] w-48 animate__animated animate__fadeInLeft "
                 : "hidden"
             }`
           )}
         >
           <div className="absolute  left-0 z-0 w-full h-full top-4 bg-zinc-900/80 backdrop-blur-lg backdrop-filter"></div>
-          <div
-            onClick={() => setToggleNav(false)}
-            className=" absolute z-[10000] left-[145px] top-4  cursor-pointer text-lg "
+          {/* <div
+            onClick={() =>
+              appContext?.updateState({
+                ...appContext.state,
+                isDrawerOpen: false,
+              })
+            }
+            className="hidden absolute z-[10000] left-[145px] top-4  cursor-pointer text-lg "
           >
             ✕
-          </div>
+          </div> */}
           <div className="z-[10000] grid grid-cols-1 w-full place-items-center px-8 text-center ">
             <div className="flex items-center space-x-8 ">
               <NavList />
@@ -59,23 +65,45 @@ const NavBar = (props: Props) => {
         <div className="!z-[10000000] flex items-center space-x-2 lg:space-x-8">
           <BuyTicketButton className="hidden md:block" />
           <div
-            onClick={() => setToggleNav(true)}
+            onClick={() =>
+              appContext?.updateState({
+                ...appContext.state,
+                isDrawerOpen: !appContext?.state.isDrawerOpen,
+              })
+            }
             className="z-[10000] block md:hidden mt-2 py-1 px-4 w-fit !text-base"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              className="z-[10000] w-6 h-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              ></path>
-            </svg>
+            {appContext?.state.isDrawerOpen ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                className="z-[10000] w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                className="z-[10000] w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                ></path>
+              </svg>
+            )}
           </div>
         </div>
       </div>

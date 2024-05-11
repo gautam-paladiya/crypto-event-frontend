@@ -5,7 +5,7 @@ type Props = {};
 
 const Footer = (props: Props) => {
   return (
-    <footer className="relative z-10 bg-blue-200">
+    <footer className="relative z-10 bg-blue-200 mb-10 rounded-md overflow-hidden">
       {/* <div className="absolute top-0 left-0 w-full h-full border -z-1 backdrop-blur-lg backdrop-filter bg-blue-200 border-zinc-700"></div> */}
       <div className="z-[1000] flex flex-col gap-5  p-5 text-white text-justify backdrop-blur-sm backdrop-filter">
         <div className="flex flex-col md:flex-row justify-between gap-5">
