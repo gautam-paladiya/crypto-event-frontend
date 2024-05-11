@@ -1,0 +1,106 @@
+{
+    "sponsors": [
+        {
+            "title": "a16zCryptoResearch",
+            "logo": "a16zCryptoResearch.png",
+            "link": "https://a16zcrypto.com/"
+        },
+        {
+            "title": "casper",
+            "logo": "casper.png",
+            "link": "https://casper.network/"
+        },
+        {
+            "title": "hyperledgerFoundation",
+            "logo": "hyperledgerFoundation.png",
+            "link": "https://www.hyperledger.org/"
+        },
+        {
+            "title": "ibm",
+            "logo": "ibm.png",
+            "link": "https://www.ibm.com/"
+        },
+        {
+            "title": "iohk",
+            "logo": "iohk.png",
+            "link": "https://iohk.io/"
+        },
+        {
+            "title": "jpMorganChaseAndCo",
+            "logo": "jpMorganChaseAndCo.png",
+            "link": "https://www.jpmorganchase.com/"
+        },
+        {
+            "title": "nttResearch",
+            "logo": "nttResearch.png",
+            "link": "https://ntt-research.com/"
+        },
+        {
+            "title": "pqshield",
+            "logo": "pqshield.png",
+            "link": "https://pqshield.com"
+        }
+    ],
+    "speakers": [
+        {
+            "name": "Adrian Zdunczyk",
+            "profile": "Adrian Zdunczyk.jpg",
+            "from": "OneFootball Labs"
+        },
+        {
+            "name": "Daniel Antcliff",
+            "profile": "Daniel Antcliff.jpg",
+            "from": "Lisk"
+        },
+        {
+            "name": "Danny Winn",
+            "profile": "Danny Winn.jpg",
+            "from": "CoinMENA"
+        },
+        {
+            "name": "Delphine Forma",
+            "profile": "Delphine Forma.jpg",
+            "from": "Dubai International Financial Centre Authority"
+        },
+        {
+            "name": "Fred Zhou",
+            "profile": "Fred Zhou.jpg",
+            "from": "Alserkal Group"
+        },
+        {
+            "name": "Ilyas Vali",
+            "profile": "Ilyas Vali.jpg",
+            "from": "Bitget"
+        },
+        {
+            "name": "Lennix Lai",
+            "profile": "Lennix Lai.jpg",
+            "from": "OKX"
+        },
+        {
+            "name": "Lex Sokolin",
+            "profile": "Lex Sokolin.jpg",
+            "from": "Binance"
+        },
+        {
+            "name": "Pieter Vanhove",
+            "profile": "Pieter Vanhove.jpg",
+            "from": "Fireblocks"
+        },
+        {
+            "name": "Russell Armand",
+            "profile": "Russell Armand.jpg",
+            "from": "Ledger Enterprise"
+        },
+        {
+            "name": "Stephen Lindsay",
+            "profile": "Stephen Lindsay.jpg",
+            "from": "Vechain"
+        },
+        {
+            "name": "Victoria Scholar",
+            "profile": "Victoria Scholar.jpg",
+            "from": "Ripple"
+        }
+    ]
+}
